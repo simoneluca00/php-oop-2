@@ -35,6 +35,13 @@ class User {
     }
 
     public function setSiteMember( $_siteMember ){
+
+        if ($_siteMember === true) {
+            $_siteMember = "può usufruire dello sconto del 20%";
+        } else {
+            $_siteMember = "non può usufruire dello sconto del 20%";
+        }
+
         $this -> siteMember = $_siteMember;
         return $this;
     }
@@ -44,9 +51,9 @@ class User {
         $currentDate = date("Y-m-j");
 
         if ($_cardValidThru < $currentDate) {
-            $_cardValidThru= "La tua carta è scaduta";
+            $_cardValidThru= "non può effettuare il pagamento perchè la carta è scaduta";
         } else {
-            $_cardValidThru= "Puoi effettuare il pagamento"; 
+            $_cardValidThru= "può effettuare il pagamento"; 
         }
 
         $this -> cardValidThru = $_cardValidThru;
@@ -57,10 +64,11 @@ class User {
 
         if ($_siteMember === true) {
             $this -> discount = 0.8;
-        } else {
+        } else if ($_siteMember === false){
             $this -> discount = 1;
-        }
+        } 
         
+
         return $this;
     }
 

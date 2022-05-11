@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+.header-info,
+.single-product {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+
+h4,
+h5,
+h6,
+.single-product p {
+    margin: 10px 0;
+}
+
+/* Utility */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid lightgray;
+}
+
+.header-info {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+.pseudo-logo {
+    padding: 20px 0;
+}
+
+/* Main */
+.container {
+    padding: 30px 0;
+}
+
+.products-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.single-product {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid lightgray;
+    /* min-height: 350px; */
+}
+
+.single-product h4 {
+    display: inline-block;
+}
+
+.single-product h6 {
+    text-decoration: underline;
+}
+
+.img-product > img {
+    height: 300px;
+}
+
+.price-name-product {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.price-name-product h4:first-child {
+    max-width: 70%;
+}
+
+.user-status {
+    border: 1px solid dodgerblue;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
