@@ -1,9 +1,12 @@
 <?php
 
+require __DIR__ . "/traits/userInfo.php";
+
+
 class User {
-    protected $name;
-    protected $lastName;
-    protected $email;
+    
+    use UserInfo;
+
     protected $siteMember;
     protected $cardValidThru;
     protected $discount;
@@ -50,10 +53,13 @@ class User {
 
         $currentDate = date("Y-m-j");
 
-        if ($_cardValidThru < $currentDate) {
-            $_cardValidThru= "non può effettuare il pagamento perchè la carta è scaduta";
+        if ($_cardValidThru >= $currentDate) {
+            $_cardValidThru = "può effettuare il pagamento"; 
         } else {
-            $_cardValidThru= "può effettuare il pagamento"; 
+            $_cardValidThru = "non può effettuare il pagamento perchè la carta è scaduta";
+
+            // NOTE exception nel caso in cui la carta dell'utente è scaduta
+            throw new Exception ("L'utente non può effettuare il pagamento perchè la carta è scaduta");
         }
 
         $this -> cardValidThru = $_cardValidThru;

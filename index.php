@@ -22,7 +22,7 @@ include_once __DIR__ . '/Class/UserClass.php';
 // istanze per gli utenti
 $utente1 = new User("Simone Luca", "Zaino", "simone@email.it", true, "2025-10-3");
 
-$utente2 = new User("Mario", "Rossi", "mario@email.it", true, "2021-03-15");
+$utente2 = new User("Mario", "Rossi", "mario@email.it", true, "2019-03-15");
 
 $utente3 = new User("Michele", "Porta", "michele@email.it", false, "2027-12-9");
 
@@ -222,6 +222,18 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
                         echo $utente1 -> getName() . " " . $utente1 -> getLastName() . " " . $utente1 -> getcardValidThru() . " e " . $utente1 -> getSiteMember() . "." 
                     ?>
                 </p>
+
+                <!-- NOTE Try and Catch -->
+                <?php
+                
+                try {
+                    $utente1 -> setCardValidThru($utente1 -> getCardValidThru());
+                } catch (Exception $e) {
+                    echo 'Eccezione ' . $e -> getMessage();
+                }
+                
+                ?>
+
                 <?php var_dump($utente1); ?>
             </div>
             <div>
@@ -230,6 +242,18 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
                         echo $utente2 -> getName() . " " . $utente2 -> getLastName() . " " . $utente2 -> getcardValidThru() . " ma " . $utente2 -> getSiteMember() . "." 
                     ?>
                 </p>
+
+                <!-- NOTE Try and Catch -->
+                <?php
+                
+                try {
+                    $utente2 -> setCardValidThru($utente2 -> getCardValidThru());
+                } catch (Exception $e) {
+                    echo 'Eccezione ' . $e -> getMessage();
+                }
+                
+                ?>
+
                 <?php var_dump($utente2); ?>
             </div>
             <div>
@@ -238,6 +262,18 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
                         echo $utente3 -> getName() . " " . $utente3 -> getLastName() . " " . $utente3 -> getcardValidThru() . " ma " . $utente3 -> getSiteMember() . "." 
                     ?>
                 </p>
+
+                <!-- NOTE Try and Catch -->
+                <?php
+                
+                try {
+                    $utente3 -> setCardValidThru($utente3 -> getCardValidThru());
+                } catch (Exception $e) {
+                    echo 'Eccezione ' . $e -> getMessage();
+                }
+                
+                ?>
+
                 <?php var_dump($utente3); ?>
             </div>
             <div>
@@ -246,6 +282,18 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
                         echo $utente4 -> getName() . " " . $utente4 -> getLastName() . " " . $utente4 -> getcardValidThru() . " e " . $utente4 -> getSiteMember() . "." 
                     ?>
                 </p>
+
+                <!-- NOTE Try and Catch -->
+                <?php
+                
+                try {
+                    $utente4 -> setCardValidThru($utente4 -> getCardValidThru());
+                } catch (Exception $e) {
+                    echo 'Eccezione ' . $e -> getMessage();
+                }
+                
+                ?>
+
                 <?php var_dump($utente4); ?>
             </div>
 
