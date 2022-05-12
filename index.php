@@ -22,11 +22,11 @@ include_once __DIR__ . '/Class/UserClass.php';
 // istanze per gli utenti
 $utente1 = new User("Simone Luca", "Zaino", "simone@email.it", true, "2025-10-3");
 
-$utente2 = new User("Mario", "Rossi", "mario@email.it", true, "2019-03-15");
+$utente2 = new User("Mario", "Rossi", "mario@email.it", true, "2023-03-15");
 
 $utente3 = new User("Michele", "Porta", "michele@email.it", false, "2027-12-9");
 
-$utente4 = new User("Federica", "Lopari", "federica@email.it", false, "2020-10-22");
+$utente4 = new User("Federica", "Lopari", "federica@email.it", false, "2024-10-22");
 
 // istanze per il cibo
 $crunchyDog = new Food ("Monge", "Crocchette ", 38, "cane", "Pollo, riso e granturco", "secco");
@@ -239,7 +239,7 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
             <div>
                 <p class="user-status">
                     <?php 
-                        echo $utente2 -> getName() . " " . $utente2 -> getLastName() . " " . $utente2 -> getcardValidThru() . " ma " . $utente2 -> getSiteMember() . "." 
+                        echo $utente2 -> getName() . " " . $utente2 -> getLastName() . " " . $utente2 -> getcardValidThru() . " e " . $utente2 -> getSiteMember() . "." 
                     ?>
                 </p>
 
@@ -279,7 +279,7 @@ $electronicRaptor = new Toys ("Ferplast", "Gioco Raptor Elettronico", 30, "gatto
             <div>
                 <p class="user-status">
                     <?php 
-                        echo $utente4 -> getName() . " " . $utente4 -> getLastName() . " " . $utente4 -> getcardValidThru() . " e " . $utente4 -> getSiteMember() . "." 
+                        echo $utente4 -> getName() . " " . $utente4 -> getLastName() . " " . $utente4 -> getcardValidThru() . " ma " . $utente4 -> getSiteMember() . "." 
                     ?>
                 </p>
 
